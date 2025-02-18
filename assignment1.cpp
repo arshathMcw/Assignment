@@ -1,10 +1,8 @@
 #include <iostream>
 #include <c7x.h>
 #include <c7x_scalable.h>
-
 using namespace std;
 using namespace c7x;
-
 int main(){
     uint64_t n = 4096,k = 8,row = k,col = n/k, arr[n],res[n];
     for(uint64_t idx = 0;idx < n;idx++){
@@ -17,7 +15,7 @@ int main(){
     seTemplate.TRANSPOSE    = __SE_TRANSPOSE_64BIT;
     seTemplate.DIMFMT = __SE_DIMFMT_3D;
     seTemplate.ICNT0 = col;
-    seTemplate.ICNT1 = vec_len;                 
+    seTemplate.ICNT1 = row;                 
     seTemplate.DIM1 = col;
     seTemplate.ICNT2 = (row/vec_len);  
     seTemplate.DIM2 = (col * vec_len);
