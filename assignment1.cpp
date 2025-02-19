@@ -10,7 +10,6 @@ int main(){
     cout<<"Enter the Group Size : ";
     cin>>k;
     uint64_t row = k,col = n/k, arr[n],res[n];
-
     //  Assign input values
     for(uint64_t idx = 0;idx < n;idx++){
         arr[idx] = idx+1;
@@ -32,7 +31,6 @@ int main(){
     saTemplate.ICNT0 = n;
     __SA0_OPEN(saTemplate);
     __SE0_OPEN((void *)&arr[0], seTemplate);
-
     // Main Operation
     for(int32_t r = 0; r < (row * col /vec_len); r++) {
         ulong_vec vIn = strm_eng<0, ulong_vec>::get_adv();
