@@ -4,7 +4,12 @@
 using namespace std;
 using namespace c7x;
 int main(){
-    uint64_t n = 4096,k = 8,row = k,col = n/k, arr[n],res[n];
+    uint64_t  n,k ;
+    cout<<"Enter The Number of Elements : ";
+    cin>>n;
+    cout<<"Enter the Number of Groups : ";
+    cin>>k;
+    uint64_t row = k,col = n/k, arr[n],res[n];
     for(uint64_t idx = 0;idx < n;idx++){
         arr[idx] = idx+1;
     }
